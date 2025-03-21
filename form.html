@@ -1,55 +1,110 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title  >ÜNAL KABLO BAŞVURU FORMU</title>
-    <style>
-        label{
-            color:bisque;
-            margin: 52px;
 
+    <title>ÜNAL KABLO BAŞVURU FORMU</title>
+    <style>
+        .label {
+            width: 1200px;
+            color: bisque;
+            margin: 10px;
         }
         input{
-            margin:12px;
+            margin:10px;
             float:middle;
+            width: 500px;
+
+        }
+
+        .parentDiv {
+            /* flex sıralı olmasını sağlar. Justify content satur bazında , align center sutün bazında  */
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            text-align: right;
         }
     </style>
 </head>
-<body bgcolor="black" >
-<img>
-    <h1 style ="color:white;text-align: center" >Ünal Kablo Başvuru Formu</h1>
 
-    
+<body bgcolor="black">
+    <img>
+    <h1 style="color:white;text-align: center">Ünal Kablo Başvuru Formu</h1>
+
+    <div style="bottom: 100px; position: fixed;">
     <form>
-        <label  style ="text-align: center">AD:</label>
-        <input type="text"name="ad"style="float:top" >
-        <br></br>
-        <label style ="text-align: center">SOYAD:</label>
-        <input type="text"name="soyad;"style="float:middle">
-        <br></br>
-        <label style ="text-align: center">YAŞ:</label>
-        <input type="date"name="yaş">
-        <br></br>
-        <label style="">ÇOCUK DURUMU:</label>
-        <label style ="">VAR</label>
-        <input type="radio"name="çocuk">
-        <label style ="">YOK</label>
-        <input type="radio"name="çocuk">
-        <br></br>
-        <label style ="text-align: center">TELEFON NUMARASI:</label>
-        <input type="number"name="telno">
-        <br></br>
-        <label style ="text-align: center"value="...@gmail;">EMAİL:</label>
-        <input type="email"name="mail">
-        <br></br>
-        <label style ="text-align: center">TECRÜBE:</label>
-        <input type="text"name="tecrübe">
-        <br></br>
-        <label style ="text-align: center">MAAŞ BEKLENTİSİ:</label>
-        <input type="number"name="maaş">
-        <br></br>
-        <input type="submit"value="kaydet">
+        
+
+        <span class="parentDiv">
+            <div class="label">
+                <label style="text-align: center">AD:</label>
+            </div>
+            <div> <input type="text" name="ad" style="float:top"></div>
+        </span>
+
+        <div class="parentDiv">
+            <div class="label">
+                <label style="text-align: center">Soyad:</label>
+            </div>
+            <div> <input type="text" name="ad" style="float:top"></div>
+        </div>
+        <div class="parentDiv">
+            <div class="label">
+                <label style="text-align: center">EMAİL:</label>
+            </div>
+            <div> <input type="email" name="mail" style="float:top"></div>
+        </div>
+
+        <div class="parentDiv">
+            <div class="label">
+                <label style="text-align: center">TECRÜBE YIL:</label>
+            </div>
+            <div> <input type="number" name="tecrübe" style="float:top"></div>
+        </div>
+        <div class="parentDiv">
+            <div class="label">
+                <label style="text-align: center">YAŞ:</label>
+            </div>
+            <div> <input type="date" name="yaş" style="float:top"></div>
+        </div>
+
+        <div class="parentDiv">
+            <div class="label">
+                <label style="text-align: center">ÇOCUK DURUMU:</label>
+            </div>
+            <div> <input type="text" name="çocuk" style="float:top"></div>
+        </div>
+
+        <div class="parentDiv">
+            <div class="label">
+                <label >TELEFON NUMARASI:</label>
+            </div>
+            <div> <input type="text" name="ad" style="float:top"></div>
+        </div>
+        <div style="height: 120px; float: right">
+        <input  type="submit" value="kaydet">
+        </div>
+    </form>
+</div>
+<div style="bottom: 0px; position: fixed; color: bisque; font-size:small;margin: none; display: flex;"
+    <p >© 2016-2020 Ünal Kablo A.Ş . All rights reserved. ®Registered Trademark and ™Trademark of Ünal Kablo Company <br></br>
+        BİZE ULAŞIN:<br></br>
+        İstanbul Bölge :<br></br>
+Ortaköy Merkez Mah. Atalay Sok. No: 3, Silivri/İstanbul/TÜRKİYE<br></br>
++90 212 243 71 11 /+90 212 243 78 84<br></br>
+
+Fabrika / Merkez :<br></br>
+Velimeşe OSB Mah.247.Sok.No:4/1
+Ergene / Tekirdağ / Türkiye<br></br>
++90 282 693 30 00 /+90 282 693 30 10
+
+sales@unalkablo.com
+
+    </p>
+</div>
 </body>
+
 </html>
