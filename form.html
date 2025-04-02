@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!DOCTYPE html commandPalette>
+<html lang="tr"inputman.designer>
 
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ÜNAL KABLO BAŞVURU FORMU</title>
+    <title >ÜNAL KABLO BAŞVURU FORMU</title>
     <style>
         .label {
             width: 1200px;
@@ -16,7 +16,9 @@
         input{
             margin:10px;
             float:middle;
-            width: 500px;
+            width: 5000px;
+            
+
 
         }
 
@@ -30,8 +32,8 @@
     </style>
 </head>
 
-<body bgcolor="black">
-    <img>
+<body bgcolor="black" >
+
     <h1 style="color:white;text-align: center">Ünal Kablo Başvuru Formu</h1>
 
     <div style="bottom: 100px; position: fixed;">
@@ -42,69 +44,70 @@
             <div class="label">
                 <label style="text-align: center">AD:</label>
             </div>
-            <div> <input type="text" name="ad" style="float:top"></div>
+            <div> <input type="text" name="ad"id="AD"></div>
         </span>
 
         <div class="parentDiv">
             <div class="label">
                 <label style="text-align: center">Soyad:</label>
             </div>
-            <div> <input type="text" name="ad" style="float:top"></div>
+            <div> <input type="text" name="ad" id="SOYAD"></div>
         </div>
         <div class="parentDiv">
             <div class="label">
                 <label style="text-align: center">EMAİL:</label>
             </div>
-            <div> <input type="email" name="mail" style="float:top"></div>
+            <div> <input type="email" name="mail" id="MAil"></div>
         </div>
 
         <div class="parentDiv">
             <div class="label">
                 <label style="text-align: center">TECRÜBE YIL:</label>
             </div>
-            <div> <input type="number" name="tecrübe" style="float:top"></div>
+            <div> <input type="number" name="tecrübe" id="TECRUBE"></div>
         </div>
         <div class="parentDiv">
             <div class="label">
                 <label style="text-align: center">YAŞ:</label>
             </div>
-            <div> <input type="date" name="yaş" style="float:top"></div>
+            <div> <input type="date" name="yaş" id="YAS"></div>
         </div>
 
         <div class="parentDiv">
             <div class="label">
                 <label style="text-align: center">ÇOCUK DURUMU:</label>
             </div>
-            <div> <input type="text" name="çocuk" style="float:top"></div>
+            <div> <input type="text" name="çocuk" id="COCUK"></div>
         </div>
 
         <div class="parentDiv">
             <div class="label">
                 <label >TELEFON NUMARASI:</label>
             </div>
-            <div> <input type="text" name="ad" style="float:top"></div>
+            <div> <input type="number" name="ad" id="NO"></div>
         </div>
-        <div style="height: 120px; float: right">
-        <input  type="submit" value="kaydet">
+        <div style=" height: 120px; float: right">
+        <input  type="button" onclick="validateForm()" value="Başvuryu oluştur" style="text-align:left"></button>
         </div>
     </form>
 </div>
-<div style="bottom: 0px; position: fixed; color: bisque; font-size:small;margin: none; display: flex;"
-    <p >© 2016-2020 Ünal Kablo A.Ş . All rights reserved. ®Registered Trademark and ™Trademark of Ünal Kablo Company <br></br>
+<div style=" width: 100%;bottom: 0px; position:fixed; color: bisque; font-size:x-small;margin: none; display: flex; background-color: chocolate;  "
+    <p>© 2016-2020 Ünal Kablo A.Ş . All rights reserved. ®Registered Trademark and ™Trademark of Ünal Kablo Company <br></br>
         BİZE ULAŞIN:<br></br>
-        İstanbul Bölge :<br></br>
-Ortaköy Merkez Mah. Atalay Sok. No: 3, Silivri/İstanbul/TÜRKİYE<br></br>
-+90 212 243 71 11 /+90 212 243 78 84<br></br>
+        İstanbul Bölge :Ortaköy Merkez Mah. Atalay Sok. No: 3, Silivri/İstanbul/TÜRKİYE     +90 212 243 71 11 /+90 212 243 78 84 <br></br>
+        Fabrika / Merkez :Velimeşe OSB Mah.247.Sok.No:4/1Ergene / Tekirdağ / Türkiye       +90 282 693 30 00 /+90 282 693 30 10<br></br>
+        sales@unalkablo.com
+        <a href="https://www.unalkablo.com">BİZ KİMİZ</a>
+</p>
 
-Fabrika / Merkez :<br></br>
-Velimeşe OSB Mah.247.Sok.No:4/1
-Ergene / Tekirdağ / Türkiye<br></br>
-+90 282 693 30 00 /+90 282 693 30 10
-
-sales@unalkablo.com
-
-    </p>
+    
 </div>
+<script>
+    function validateForm() {
+        if( document.getElementById("AD")==null)
+        alert("BU ALAN BOŞ BIRAKILAMAZ")
+    }
+</script>
 </body>
 
 </html>
