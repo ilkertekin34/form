@@ -29,6 +29,19 @@
             align-items: center;
             text-align: right;
         }
+        .snackbar{
+            visibility: hidden; /* Hidden by default. Visible on click */
+            min-width: 250px; /* Set a default minimum width */
+            margin-left: -125px; /* Divide value of min-width by 2 */
+            background-color: #333; /* Black background color */
+            color: #fff; /* White text color */
+            text-align: center; /* Centered text */
+            border-radius: 2px; /* Rounded borders */
+            padding: 16px; /* Padding */
+            position: fixed; /* Sit on top of the screen */
+            z-index: 1; /* Add a z-index if needed */
+            left: 50%; /* Center the snackbar */
+            bottom: 30px; /* 30px from the bottom */}
     </style>
 </head>
 
@@ -87,25 +100,31 @@
             <div> <input type="number" name="ad" id="NO"></div>
         </div>
         <div style=" height: 120px; float: right">
-        <input  type="button" onclick="validateForm()" value="Başvuryu oluştur" style="text-align:left"></button>
+        <input  class="snackbar" id="snackbar" type="button" onclsick="validateForm()" value="Başvuryu oluştur" style="text-align:left">
+
         </div>
     </form>
 </div>
-<div style=" width: 100%;bottom: 0px; position:fixed; color: bisque; font-size:x-small;margin: none; display: flex; background-color: chocolate;  "
+<div style=" width: 100%;bottom: 0px; position:fixed; color: bisque; font-size:x-small;margin: none; display: flex; background-color: chocolate;"
     <p>© 2016-2020 Ünal Kablo A.Ş . All rights reserved. ®Registered Trademark and ™Trademark of Ünal Kablo Company <br></br>
         BİZE ULAŞIN:<br></br>
         İstanbul Bölge :Ortaköy Merkez Mah. Atalay Sok. No: 3, Silivri/İstanbul/TÜRKİYE     +90 212 243 71 11 /+90 212 243 78 84 <br></br>
         Fabrika / Merkez :Velimeşe OSB Mah.247.Sok.No:4/1Ergene / Tekirdağ / Türkiye       +90 282 693 30 00 /+90 282 693 30 10<br></br>
         sales@unalkablo.com
         <a href="https://www.unalkablo.com">BİZ KİMİZ</a>
-</p>
+    </p>
 
     
 </div>
 <script>
     function validateForm() {
-        if( document.getElementById("AD")==null)
-        alert("BU ALAN BOŞ BIRAKILAMAZ")
+            if(document.getElementById(AD).value="")
+        {
+            var x = document.getElementById("snackbar");
+            x.className="x";
+            setTimeout(function(){ x.className = x.className.replace("x", ""); }, 3000);
+        }
+
     }
 </script>
 </body>
