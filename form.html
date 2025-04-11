@@ -91,7 +91,7 @@
                 <input type="button" onclick="validateForm()" value="Başvuryu oluştur" style="text-align:left">
 
             </div>
-            <div id="snackbar" style="color: #fff;display: none;">BOŞ ALANLARI DOLDURUNUZ...</div>
+            <div id="snackbar" style="color: #fff; display:none;">BOŞ ALANLARI DOLDURUNUZ...</div>
         </form>
     </div>
     <div style=" width: 100%;bottom: 0px; position:fixed; color: bisque; font-size:x-small;margin: none; display: flex; background-color: chocolate;"
@@ -111,10 +111,11 @@
     <script>
         function validateForm() {
             console.log(validateForm);
-            if (document.getElementById("AD").value == 0) {
+            if (document.getElementById("AD").value == 0)
+              {
                 var x = document.getElementById("snackbar");
-                x.style.display = "block"
-                setInterval(x.style.display = "none",3000);
+                x.style.display = block;
+                setTimeout(x.style.display = "none",3000)   
             }
     
         }
